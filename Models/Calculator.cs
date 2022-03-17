@@ -10,6 +10,7 @@
         public bool IsError { get; set; } = false;
         public string ErrorMessage { get; set; } = "";
 
+        //I've decided to use the constructor to calculate with given inputs=>
         public Calculator(float number1, float number2, string userChoice)
         {
             this.num1 = number1;
@@ -21,10 +22,10 @@
         //Main Calculation Operation Happens Here =>
         public void Calculate()
         {
-            //If I would use "using" it would be more efficient for the application, after creating an instance from Operator class, I could dispose it automatically,
-            //But since this is a lightweight app, I can do it like this =>
+
             Operator opt;
 
+            //Creating an instance depending on the case.
             switch (choice)
             {
                 case "Add":
@@ -37,7 +38,7 @@
                     break;
                 default:
                     IsError = true;
-                    ErrorMessage = "Please input * or + ";
+                    ErrorMessage = "Selected Operation does not exist";
                     break;
             }
         }

@@ -19,7 +19,8 @@ namespace Btec_WebApp.Pages
         public bool IsError { get; set; } = false;
         public List<SelectListItem> Options { get; set; } = new List<SelectListItem>() {
                 new SelectListItem() { Text = "Add", Value = "Add" },
-                new SelectListItem() { Text = "Multiply", Value = "Multiply" }
+                new SelectListItem() { Text = "Multiply", Value = "Multiply" },
+                new SelectListItem() { Text = "Test", Value = "Test" },
     };
         public IndexModel(ILogger<IndexModel> logger)
         {
